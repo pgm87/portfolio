@@ -305,8 +305,7 @@ html {
 }
 
 header {
-  background-image: url(../assets/texture.jpg);
-}
-header .wrapper {
-  width: 100%;
+  background-color: #495d63;
+  font-size: 2rem;
+  color: white;
 }
