@@ -1,0 +1,49 @@
+@use "variables" as *;
+
+// OPEN SANS
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(../fonts/OpenSans-Regular.ttf);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(../fonts/OpenSans-Italic.ttf);
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(../fonts/OpenSans-Bold.ttf);
+    font-weight: bold;
+}
+
+// NEWS CYCLE
+
+@font-face {
+    font-family: "News Cycle";
+    src: url(../fonts/NewsCycle-Regular.ttf);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "News Cycle";
+    src: url(../fonts/NewsCycle-Bold.ttf);
+    font-weight: bold;
+}
+
+// OSWALD
+
+@font-face {
+    font-family: "Oswald";
+    src: url(../fonts/Oswald-Regular.ttf);
+    font-weight: normal;
+}
+
+// FONT STYLYING 
+
+h1 {
+    font-family: $primaryFont;
+}
