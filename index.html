@@ -7,30 +7,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Philip Miles Portfolio</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
 
 <body>
-    <header>
-        <div class="wrapper">
-            <nav>
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Projects</li>
-                    <li>Contact</li>
-                </ul>
-            </nav>
-            <h1>philip miles</h1>
-            <h2>frontend developer</h2>
+    <header class="wrapper">
+
+        <nav class="topNav">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="mainContent">
+            <div class="headerText">
+                <h1>philip miles</h1>
+                <h2>frontend developer</h2>
+            </div>
+            <div class="imgBoxProfile">
+                <img src="assets/portfolioimage.jpg" alt="Picture of me">
+            </div>
         </div>
+        <nav class="socialNav">
+            <div class="iconsNav">
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-github"></i></a>
+            </div>
+            <p>philip.g.miles@gmail.com</p>
+        </nav>
+
     </header>
-    <main>
+    <main class="wrapper">
         <section>
             <h2>About me</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam laborum ullam aspernatur voluptatibus.
                 Voluptatem soluta magni odit adipisci quidem mollitia quas reiciendis in, necessitatibus autem aliquam
                 asperiores alias itaque suscipit maxime est nihil magnam. Deleniti id commodi esse distinctio. Velit
                 reiciendis nisi nemo incidunt repellat sequi, distinctio autem optio voluptas!</p>
+        </section>
+        <section>
+            <h2>Skills</h2>
+            <ul>
+                <li>
+                    <i class="devicon-html5-plain-wordmark"></i>
+                </li>
+                <li>
+                    <i class="devicon-css3-plain-wordmark"></i>
+                </li>
+                <li>
+                    <i class="devicon-sass-original"></i>
+                </li>
+                <li>
+                    <i class="devicon-javascript-plain"></i>
+                </li>
+                <li>
+                    <i class="devicon-jquery-plain-wordmark"></i>
+                </li>
+                <li>
+                    <i class="devicon-firebase-plain-wordmark"></i>
+                </li>
+                <li>
+                    <i class="devicon-react-original-wordmark"></i>
+                </li>
+                <li>
+                    <i class="devicon-git-plain-wordmark"></i>
+                </li>
+            </ul>
         </section>
         <section>
             <h2>Projects</h2>
@@ -40,17 +83,7 @@
                     reiciendis sequi porro quibusdam quam ipsam voluptates.</p>
             </div>
         </section>
-        <section>
-            <h2>Skills</h2>
-            <ul>
-                <li>ICON</li>
-                <li>ICON</li>
-                <li>ICON</li>
-                <li>ICON</li>
-                <li>ICON</li>
-                <li>ICON</li>
-            </ul>
-        </section>
+
         <section>
             <form action=""><input type="text" name="" id=""><input type="text" name="" id=""><textarea name="" id=""
                     cols="30" rows="10"></textarea></form>
@@ -61,7 +94,7 @@
             <!-- Copyright here -->
         </p>
     </footer>
-
+    <script src="https://kit.fontawesome.com/9ebd40d00c.js" crossorigin="anonymous"></script>
     <script src="app.js"></script>
 </body>
 

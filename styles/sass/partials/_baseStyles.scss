@@ -9,3 +9,41 @@
 html {
     font-size: 125%;
 }
+
+body {
+    background-color: $primaryColor;
+    color: $fontColor;
+    font-family: $primaryFont;
+}
+
+ul,
+li,
+h1,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+section {
+    margin: 20px 0;
+}
+
+a {
+    color: $fontColor;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $hoverColor;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

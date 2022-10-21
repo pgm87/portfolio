@@ -1,0 +1,12 @@
+@use "variables" as *;
+
+.topNav {
+    ul {
+        display: flex;
+        justify-content: flex-end;
+
+        li {
+            margin: 0 5px;
+        }
+    }
+}
