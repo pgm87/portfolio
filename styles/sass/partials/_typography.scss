@@ -3,48 +3,26 @@
 // OPEN SANS
 
 @font-face {
-    font-family: "Open Sans";
-    src: url(../fonts/OpenSans-Regular.ttf);
+    font-family: "Rubik";
+    src: url(../fonts/Rubik-Regular.ttf);
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Open Sans";
-    src: url(../fonts/OpenSans-Italic.ttf);
+    font-family: "Rubik";
+    src: url(../fonts/Rubik-Italic.ttf);
     font-style: italic;
 }
 
 @font-face {
-    font-family: "Open Sans";
-    src: url(../fonts/OpenSans-Bold.ttf);
+    font-family: "Rubik";
+    src: url(../fonts/Rubik-Bold.ttf);
     font-weight: bold;
 }
 
-// NEWS CYCLE
 
-@font-face {
-    font-family: "News Cycle";
-    src: url(../fonts/NewsCycle-Regular.ttf);
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "News Cycle";
-    src: url(../fonts/NewsCycle-Bold.ttf);
-    font-weight: bold;
-}
-
-// OSWALD
-
-@font-face {
-    font-family: "Oswald";
-    src: url(../fonts/Oswald-Regular.ttf);
-    font-weight: normal;
-}
-
-// FONT STYLYING 
 
 h1 {
     font-family: $primaryFont;
-    
+    font-size: 2rem;
 }
