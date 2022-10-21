@@ -1,26 +1,27 @@
 @use "variables" as *;
 
-.socialNav {
-
+.skills {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 
-    .iconsNav {
+    .iconList {
         display: flex;
-        width: 5%;
-        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
 
-        i {
-            width: 100%;
-            font-size: 1rem;
+        li {
+            width: 25%;
+            font-size: 4rem;
             text-align: center;
             margin: 20px 0;
             padding: 30px;
             display: flex;
             justify-content: center;
             align-items: center;
+
+            &:hover {
+                background-color: $hoverColor;
+            }
         }
     }
-
-
 }
