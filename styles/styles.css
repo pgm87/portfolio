@@ -340,7 +340,6 @@ i {
 header {
   background-color: #f8f8f8;
   color: #212121;
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -351,6 +350,7 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 20px;
 }
 header .mainContent {
   display: -webkit-box;
@@ -364,7 +364,7 @@ header .mainContent {
       justify-content: space-around;
   -ms-flex-line-pack: center;
       align-content: center;
-  padding: 2% 0;
+  padding: 10% 0;
 }
 header .headerText {
   -ms-flex-item-align: center;
@@ -397,19 +397,25 @@ header .imgBoxProfile img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .socialNav .iconsNav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 5%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-.socialNav .iconsNav i {
+.socialNav .iconsNav a {
   width: 100%;
-  font-size: 1rem;
+  height: auto;
+}
+.socialNav .iconsNav a i {
+  width: 100%;
+  font-size: 2rem;
   text-align: center;
   margin: 20px 0;
   padding: 30px;
@@ -422,6 +428,10 @@ header .imgBoxProfile img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.socialNav .iconsNav p {
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .skills {
@@ -488,5 +498,45 @@ header .imgBoxProfile img {
 }
 .projectsSection .imgProject img {
   border-radius: 5%;
+  border: 2px solid #c5c5c5;
+}
+
+.contact {
+  background-color: #c5c5c5;
+  padding: 2% 0;
+}
+.contact form {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contact form textarea {
+  resize: none;
+  border-radius: 0%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-family: inherit;
+  width: 100%;
+  outline: none;
+}
+.contact form textarea:focus {
+  outline: none;
+  border: 2px solid #c5c5c5;
+}
+.contact form input {
+  border-style: none;
+  border-bottom: 2px solid #c5c5c5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-family: inherit;
+}
+.contact form input:focus {
+  outline: none;
   border: 2px solid #c5c5c5;
 }

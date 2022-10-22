@@ -1,0 +1,43 @@
+@use "variables" as *;
+
+.contact {
+
+    background-color: $hoverColor;
+    padding: 2% 0;
+
+    form {
+        width: 60%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        textarea {
+            resize: none;
+            border-radius: 0%;
+            transition: 0.3s;
+            font-family: inherit;
+            width: 100%;
+            outline: none;
+
+            &:focus {
+                outline: none;
+                border: 2px solid $hoverColor;
+
+            }
+        }
+
+        input {
+            border-style: none;
+            border-bottom: 2px solid $hoverColor;
+            transition: 0.3s;
+            font-family: inherit;
+
+
+            &:focus {
+                outline: none;
+                border: 2px solid $hoverColor;
+            }
+
+        }
+    }
+}
