@@ -19,6 +19,9 @@ header {
 
     .headerText {
         align-self: center;
+        padding: 10px;
+        animation: 1s ease-in addBoxShadow;
+        animation-fill-mode: forwards;
     }
 
     .imgBoxProfile {

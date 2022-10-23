@@ -1,3 +1,23 @@
+@-webkit-keyframes addBoxShadow {
+  0% {
+    -webkit-box-shadow: 0 1px 2px rgba(33, 33, 33, 0);
+            box-shadow: 0 1px 2px rgba(33, 33, 33, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 1px 2px #212121;
+            box-shadow: 0 1px 2px #212121;
+  }
+}
+@keyframes addBoxShadow {
+  0% {
+    -webkit-box-shadow: 0 1px 2px rgba(33, 33, 33, 0);
+            box-shadow: 0 1px 2px rgba(33, 33, 33, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 1px 2px #212121;
+            box-shadow: 0 1px 2px #212121;
+  }
+}
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -369,6 +389,11 @@ header .mainContent {
 header .headerText {
   -ms-flex-item-align: center;
       align-self: center;
+  padding: 10px;
+  -webkit-animation: 1s ease-in addBoxShadow;
+          animation: 1s ease-in addBoxShadow;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 header .imgBoxProfile {
   width: 30%;
@@ -505,6 +530,39 @@ header .imgBoxProfile img {
   background-color: #c5c5c5;
   padding: 2% 0;
 }
+.contact .contactContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contact .contactContent .linksToContact {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.contact .contactContent .linksToContact p {
+  width: 100%;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.contact .contactContent .linksToContact .linkBottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.contact .contactContent .linksToContact .linkBottom i {
+  font-size: 4rem;
+  text-align: center;
+}
 .contact form {
   width: 60%;
   display: -webkit-box;
@@ -518,12 +576,12 @@ header .imgBoxProfile img {
 }
 .contact form textarea {
   resize: none;
-  border-radius: 0%;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   font-family: inherit;
   width: 100%;
   outline: none;
+  border: none;
 }
 .contact form textarea:focus {
   outline: none;
@@ -535,8 +593,21 @@ header .imgBoxProfile img {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   font-family: inherit;
+  width: 45%;
 }
 .contact form input:focus {
   outline: none;
   border: 2px solid #c5c5c5;
+}
+.contact form button {
+  background-color: #212121;
+  color: #f8f8f8;
+  font-family: "Rubik";
+  border: none;
+  outline: none;
+}
+
+footer {
+  text-align: center;
+  padding: 1%;
 }

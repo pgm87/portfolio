@@ -40,15 +40,15 @@
             <p>philip.g.miles@gmail.com</p>
         </nav>
     </header>
-    <main class="wrapper">
-        <section>
+    <main>
+        <section class="wrapper">
             <h2>About me</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam laborum ullam aspernatur voluptatibus.
                 Voluptatem soluta magni odit adipisci quidem mollitia quas reiciendis in, necessitatibus autem aliquam
                 asperiores alias itaque suscipit maxime est nihil magnam. Deleniti id commodi esse distinctio. Velit
                 reiciendis nisi nemo incidunt repellat sequi, distinctio autem optio voluptas!</p>
         </section>
-        <section class="skills">
+        <section class="skills wrapper">
             <h2>Skills</h2>
             <ul class="iconList">
                 <li>
@@ -77,7 +77,7 @@
                 </li>
             </ul>
         </section>
-        <section class="projectsSection">
+        <section class="projectsSection wrapper">
             <h2>Projects</h2>
             <div class="project">
                 <div class="projectTextBox">
@@ -92,21 +92,38 @@
             </div>
         </section>
         <section class="contact">
-            <form action="">
-                <label class="sr-only" for="name">Name</label>
-                <input type="text" name="name" id="commentName" required placeholder="Name">
-                <label class="sr-only" for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Email">
-                <label for="comment" class="sr-only">Write Comment Here</label>
-                <textarea name="comment" id="comment" cols="30" rows="10" required minlength="30"
-                    placeholder="Message"></textarea>
-                <button class="button">Submit</button>
-            </form>
+            <div class="wrapper">
+
+                <h2> Contact</h2>
+                <div class="contactContent">
+                    <div class="linksToContact">
+                        <p>Reach out for more information</p>
+                        <div class="linkBottom">
+                            <a href="">
+                                <i class="devicon-linkedin-plain"></i>
+                            </a>
+                            <a href="">
+                                <i class="devicon-github-original-wordmark"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <form action="https://formsubmit.co/philip.g.miles@gmail.com" method="POST">
+                        <label class="sr-only" for="name">Name</label>
+                        <input type="text" name="name" id="commentName" required placeholder="Name">
+                        <label class="sr-only" for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Email">
+                        <label for="comment" class="sr-only">Write Comment Here</label>
+                        <textarea name="comment" id="comment" cols="30" rows="10" required minlength="30"
+                            placeholder="Message"></textarea>
+                        <button class="button">reach out</button>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
         <p>
-            <!-- Copyright here -->
+            made with care by me
         </p>
     </footer>
     <script src="app.js"></script>
