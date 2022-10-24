@@ -36,9 +36,12 @@ section {
 a {
     color: $fontColor;
     text-decoration: none;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    padding: 3px;
 
     &:hover {
-        background-color: $hoverColor;
+        animation: 0.5s ease-in addBoxShadow;
+        animation-fill-mode: forwards;
     }
 }
 

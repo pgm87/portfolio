@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Philip Miles Portfolio</title>
+    <title>philip miles</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
 
 <body>
-    <header class="wrapper">
+    <header class="wrapper" id="header">
         <nav class="topNav">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="$contact">Contact</a></li>
             </ul>
         </nav>
         <div class="mainContent">
@@ -30,10 +30,10 @@
         </div>
         <nav class="socialNav">
             <div class="iconsNav">
-                <a href="">
+                <a href="https://www.linkedin.com/in/philip-miles-01570b24b/" target="_blank">
                     <i class="devicon-linkedin-plain"></i>
                 </a>
-                <a href="">
+                <a href="https://github.com/pgm87" target="_blank">
                     <i class="devicon-github-original-wordmark"></i>
                 </a>
             </div>
@@ -41,84 +41,101 @@
         </nav>
     </header>
     <main>
-        <section class="wrapper">
+        <section class="wrapper aboutMe" id="about">
             <h2>About me</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam laborum ullam aspernatur voluptatibus.
-                Voluptatem soluta magni odit adipisci quidem mollitia quas reiciendis in, necessitatibus autem aliquam
-                asperiores alias itaque suscipit maxime est nihil magnam. Deleniti id commodi esse distinctio. Velit
-                reiciendis nisi nemo incidunt repellat sequi, distinctio autem optio voluptas!</p>
+            <div class="aboutMeContent">
+                <p>Before being a Web Developer, I was a freelance musician, where I performed live, taught, and helped
+                    see creative ideas come to reality. Throughout my time, I learned how to express my ideas to a
+                    diverse audience, help come up creative solutions to complicated problems, and created an
+                    environment where everyone felt included. </p>
+                <div class="aboutMeImage"><img src="./assets/aboutme.png" alt="photo of me in a winter paradise"></div>
+            </div>
         </section>
         <section class="skills wrapper">
             <h2>Skills</h2>
             <ul class="iconList">
                 <li>
-                    <i class="devicon-html5-plain-wordmark"></i>
+                    <i class="devicon-html5-plain-wordmark" alt="html icon"></i>
                 </li>
                 <li>
-                    <i class="devicon-css3-plain-wordmark"></i>
+                    <i class="devicon-css3-plain-wordmark" alt="css icon"></i>
                 </li>
                 <li>
-                    <i class="devicon-sass-original"></i>
+                    <i class="devicon-sass-original" alt="sass icon"></i>
                 </li>
                 <li>
-                    <i class="devicon-javascript-plain"></i>
+                    <i class="devicon-javascript-plain" alt="javascript icont"></i>
                 </li>
                 <li>
-                    <i class="devicon-jquery-plain-wordmark"></i>
+                    <i class="devicon-jquery-plain-wordmark" alt="jquery icon"></i>
                 </li>
                 <li>
-                    <i class="devicon-firebase-plain-wordmark"></i>
+                    <i class="devicon-firebase-plain-wordmark" alt="firebase icon"></i>
                 </li>
                 <li>
-                    <i class="devicon-react-original-wordmark"></i>
+                    <i class="devicon-react-original-wordmark" alt="react icon"></i>
                 </li>
                 <li>
-                    <i class="devicon-git-plain-wordmark"></i>
+                    <i class="devicon-git-plain-wordmark" alt="git icon"></i>
                 </li>
             </ul>
         </section>
         <section class="projectsSection wrapper">
             <h2>Projects</h2>
-            <div class="project">
+            <div class="projectEven">
+                <div class="projectTextBox">
+                    <h3>PSD conversion Beachstay</h3>
+                    <p>A conversion of a photoshop wireframe using HTML,CSS, and javascript</p>
+                    <div class="linksToProjects">
+                        <a href="https://remarkable-hummingbird-fa2d03.netlify.app/" class="firstLink"
+                            target="_blank">Live Site</a><a href="https://github.com/pgm87/project-1-beach">Code</a>
+                    </div>
+                </div>
+                <div class="imgProject"><img src="assets/project-beachstay-screenshot.png"
+                        alt="Picture of project of Beachstay"></div>
+            </div>
+            <div class="projectOdd">
+                <div class="imgProject"><img src="assets/project-beachstay-screenshot.png"
+                        alt="Picture of project of beachstay"></div>
                 <div class="projectTextBox">
                     <h3>project 1</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi voluptatum ipsum voluptate totam,
                         reiciendis sequi porro quibusdam quam ipsam voluptates.</p>
                     <div class="linksToProjects">
-                        <a href="" class="firstLink">Live Site</a><a href="">Code</a>
+                        <a href="" class="firstLink" target="_blank">Live Site</a><a href="" target="_blank">Code</a>
                     </div>
                 </div>
-                <div class="imgProject"><img src="assets/project-beachstay-screenshot.png" alt=""></div>
+
             </div>
         </section>
-        <section class="contact">
-            <div class="wrapper">
-
-                <h2> Contact</h2>
-                <div class="contactContent">
-                    <div class="linksToContact">
-                        <p>Reach out for more information</p>
-                        <div class="linkBottom">
-                            <a href="">
-                                <i class="devicon-linkedin-plain"></i>
-                            </a>
-                            <a href="">
-                                <i class="devicon-github-original-wordmark"></i>
-                            </a>
-                        </div>
+        <section class="contact wrapper" id="contact">
+            <div class="leftSideContact">
+                <h2>Reach out out to me</h2>
+                <p>Would love to hear from you, feel free to send a me a message or follow me on social
+                    media
+                </p>
+                <div class="socialBottom">
+                    <h5>follow me</h5>
+                    <div class="linksSocialBottom">
+                        <a href="https://www.linkedin.com/in/philip-miles-01570b24b/">
+                            <i class="devicon-linkedin-plain" alt="linkedin icon"></i>
+                        </a>
+                        <a href="https://github.com/pgm87" target="_blank">
+                            <i class="devicon-github-original-wordmark" alt="linkedin icon"></i>
+                        </a>
                     </div>
-                    <form action="https://formsubmit.co/philip.g.miles@gmail.com" method="POST">
-                        <label class="sr-only" for="name">Name</label>
-                        <input type="text" name="name" id="commentName" required placeholder="Name">
-                        <label class="sr-only" for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Email">
-                        <label for="comment" class="sr-only">Write Comment Here</label>
-                        <textarea name="comment" id="comment" cols="30" rows="10" required minlength="30"
-                            placeholder="Message"></textarea>
-                        <button class="button">reach out</button>
-                    </form>
                 </div>
             </div>
+            <form action="https://formsubmit.co/philip.g.miles@gmail.com" method="POST">
+                <label class="sr-only" for="name">Name</label>
+                <input type="text" name="name" id="commentName" required placeholder="Name">
+                <label class="sr-only" for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Email">
+                <label for="comment" class="sr-only">Write Comment Here</label>
+                <textarea name="comment" id="comment" cols="30" rows="7" required minlength="30"
+                    placeholder="Message"></textarea>
+                <button class="button">reach out</button>
+            </form>
         </section>
     </main>
     <footer>

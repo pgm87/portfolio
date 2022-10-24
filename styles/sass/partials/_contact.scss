@@ -4,81 +4,89 @@
 
 .contact {
 
-    background-color: $hoverColor;
-    padding: 2% 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 40px;
 
-    .contactContent {
+    .leftSideContact {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
 
-        .linksToContact {
-            width: 30%;
+        width: 50%;
+
+        .socialBottom {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-around;
 
-
-            p {
-                width: 100%;
-                align-self: center;
-            }
-
-            .linkBottom {
+            .linksSocialBottom {
                 display: flex;
-                width: 100%;
-                justify-content: space-around;
-
 
                 i {
-                    font-size: 4rem;
+                    font-size: 2rem;
                     text-align: center;
-
                 }
             }
         }
+
     }
 
-    form {
-        width: 60%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+}
 
-        textarea {
-            resize: none;
-            transition: 0.3s;
-            font-family: inherit;
-            width: 100%;
-            outline: none;
-            border: none;
-
-            &:focus {
-                outline: none;
-                border: 2px solid $hoverColor;
-
-            }
-        }
-
-        input {
-            border-style: none;
-            border-bottom: 2px solid $hoverColor;
-            transition: 0.3s;
-            font-family: inherit;
-            width: 45%;
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: $fontColor;
+    color: $primaryColor;
+    padding: 3%;
+    width: 50%;
 
 
-            &:focus {
-                outline: none;
-                border: 2px solid $hoverColor;
-            }
+    textarea {
+        resize: none;
+        transition: 0.3s;
+        font-family: inherit;
+        width: 100%;
+        outline: none;
+        border: none;
+        background-color: inherit;
+        border-bottom: 2px solid $primaryColor;
+        margin-bottom: 2%;
 
-        }
-
-        button {
-            background-color: $fontColor;
+        &::placeholder {
             color: $primaryColor;
-            font-family: $primaryFont;
-            border: none;
-            outline: none;
+            opacity: 1;
+            font-weight: 300;
         }
+
+
+    }
+
+    input {
+        border-style: none;
+        border-bottom: 2px solid $primaryColor;
+        font-family: inherit;
+        width: 100%;
+        background-color: inherit;
+
+        &::placeholder {
+            color: $primaryColor;
+            opacity: 1;
+            font-weight: 300;
+        }
+
+    }
+
+    button {
+        background-color: $primaryColor;
+        color: $fontColor;
+        font-weight: 300;
+        font-family: $primaryFont;
+        padding: 2%;
+        border: none;
+        outline: none;
+        align-self: flex-end;
     }
 }

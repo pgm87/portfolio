@@ -20,6 +20,14 @@
     font-weight: bold;
 }
 
+@font-face {
+    font-family: "Rubik";
+    src: url(../fonts/Rubik-light.ttf);
+    font-weight: 300;
+}
+
+
+
 
 
 h1 {
@@ -29,4 +37,8 @@ h1 {
 
 h2 {
     font-weight: normal;
+}
+
+p {
+    font-weight: 300;
 }

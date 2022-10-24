@@ -1,4 +1,12 @@
+@use "variables" as *;
+
+
 footer {
+    background-color: $fontColor;
     text-align: center;
     padding: 1%;
+
+    p {
+        color: $primaryColor;
+    }
 }

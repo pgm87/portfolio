@@ -295,6 +295,11 @@ html {
   src: url(../fonts/Rubik-Bold.ttf);
   font-weight: bold;
 }
+@font-face {
+  font-family: "Rubik";
+  src: url(../fonts/Rubik-light.ttf);
+  font-weight: 300;
+}
 h1 {
   font-weight: bold;
   font-size: 2rem;
@@ -302,6 +307,10 @@ h1 {
 
 h2 {
   font-weight: normal;
+}
+
+p {
+  font-weight: 300;
 }
 
 .wrapper {
@@ -340,9 +349,15 @@ section {
 a {
   color: #212121;
   text-decoration: none;
+  -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  padding: 3px;
 }
 a:hover {
-  background-color: #c5c5c5;
+  -webkit-animation: 0.5s ease-in addBoxShadow;
+          animation: 0.5s ease-in addBoxShadow;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 img {
@@ -370,7 +385,8 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  height: max(100vh, 30rem);
 }
 header .mainContent {
   display: -webkit-box;
@@ -442,8 +458,7 @@ header .imgBoxProfile img {
   width: 100%;
   font-size: 2rem;
   text-align: center;
-  margin: 20px 0;
-  padding: 30px;
+  padding: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -457,6 +472,40 @@ header .imgBoxProfile img {
 .socialNav .iconsNav p {
   -ms-flex-item-align: center;
       align-self: center;
+}
+
+.aboutMe {
+  padding: 2% 0;
+}
+.aboutMe h2 {
+  margin: 20px 0;
+}
+.aboutMe .aboutMeContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.aboutMe .aboutMeContent p {
+  width: 60%;
+  font-size: 1rem;
+}
+.aboutMe .aboutMeContent .aboutMeImage {
+  width: 28%;
+}
+.aboutMe .aboutMeContent .aboutMeImage img {
+  width: 100%;
+  display: block;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid #212121;
+  -webkit-box-shadow: 0 1px 2px #212121;
+          box-shadow: 0 1px 2px #212121;
 }
 
 .skills {
@@ -495,28 +544,39 @@ header .imgBoxProfile img {
       -ms-flex-align: center;
           align-items: center;
 }
-.skills .iconList li:hover {
-  background-color: #c5c5c5;
-}
 
-.projectsSection .project {
+.projectsSection {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.projectsSection .projectEven {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  padding: 5% 0;
 }
-.projectsSection .project .projectTextBox {
+.projectsSection .projectEven .projectTextBox {
+  -ms-flex-item-align: center;
+      align-self: center;
   width: 50%;
 }
-.projectsSection .project .linksToProjects {
+.projectsSection .projectEven .projectTextBox p {
+  margin: 30px 0;
+}
+.projectsSection .projectEven .linksToProjects {
   margin: 10px 0;
 }
-.projectsSection .project .linksToProjects .firstLink {
+.projectsSection .projectEven .linksToProjects a {
+  width: auto;
+}
+.projectsSection .projectEven .linksToProjects .firstLink {
   margin-right: 20px;
-  border-right: 3px solid #c5c5c5;
-  padding-right: 20px;
 }
 .projectsSection .imgProject {
   width: 40%;
@@ -525,46 +585,86 @@ header .imgBoxProfile img {
   border-radius: 5%;
   border: 2px solid #c5c5c5;
 }
-
-.contact {
-  background-color: #c5c5c5;
+.projectsSection .projectOdd {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   padding: 2% 0;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
 }
-.contact .contactContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.contact .contactContent .linksToContact {
-  width: 30%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-.contact .contactContent .linksToContact p {
-  width: 100%;
+.projectsSection .projectOdd .projectTextBox {
   -ms-flex-item-align: center;
       align-self: center;
+  width: 50%;
 }
-.contact .contactContent .linksToContact .linkBottom {
+.projectsSection .projectOdd .projectTextBox p {
+  margin: 30px 0;
+}
+.projectsSection .projectOdd .projectTextBox .imgProject {
+  width: 40%;
+}
+.projectsSection .projectOdd .projectTextBox .imgProject img {
+  border-radius: 5%;
+  border: 2px solid #c5c5c5;
+}
+.projectsSection .projectOdd .projectTextBox .linksToProjects {
+  margin: 10px 0;
+}
+.projectsSection .projectOdd .projectTextBox .linksToProjects .firstLink {
+  margin-right: 20px;
+  border-right: 3px solid #c5c5c5;
+  padding-right: 20px;
+}
+
+.contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+.contact .leftSideContact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+.contact .leftSideContact .socialBottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
-.contact .contactContent .linksToContact .linkBottom i {
-  font-size: 4rem;
+.contact .leftSideContact .socialBottom .linksSocialBottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contact .leftSideContact .socialBottom .linksSocialBottom i {
+  font-size: 2rem;
   text-align: center;
 }
-.contact form {
-  width: 60%;
+
+form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -573,8 +673,12 @@ header .imgBoxProfile img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: #212121;
+  color: #f8f8f8;
+  padding: 3%;
+  width: 50%;
 }
-.contact form textarea {
+form textarea {
   resize: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -582,32 +686,84 @@ header .imgBoxProfile img {
   width: 100%;
   outline: none;
   border: none;
+  background-color: inherit;
+  border-bottom: 2px solid #f8f8f8;
+  margin-bottom: 2%;
 }
-.contact form textarea:focus {
-  outline: none;
-  border: 2px solid #c5c5c5;
-}
-.contact form input {
-  border-style: none;
-  border-bottom: 2px solid #c5c5c5;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  font-family: inherit;
-  width: 45%;
-}
-.contact form input:focus {
-  outline: none;
-  border: 2px solid #c5c5c5;
-}
-.contact form button {
-  background-color: #212121;
+form textarea::-webkit-input-placeholder {
   color: #f8f8f8;
+  opacity: 1;
+  font-weight: 300;
+}
+form textarea::-moz-placeholder {
+  color: #f8f8f8;
+  opacity: 1;
+  font-weight: 300;
+}
+form textarea:-ms-input-placeholder {
+  color: #f8f8f8;
+  opacity: 1;
+  font-weight: 300;
+}
+form textarea::-ms-input-placeholder {
+  color: #f8f8f8;
+  opacity: 1;
+  font-weight: 300;
+}
+form textarea::placeholder {
+  color: #f8f8f8;
+  opacity: 1;
+  font-weight: 300;
+}
+form input {
+  border-style: none;
+  border-bottom: 2px solid #f8f8f8;
+  font-family: inherit;
+  width: 100%;
+  background-color: inherit;
+}
+form input::-webkit-input-placeholder {
+  color: #f8f8f8;
+  opacity: 1;
+  font-weight: 300;
+}
+form input::-moz-placeholder {
+  color: #f8f8f8;
+  opacity: 1;
+  font-weight: 300;
+}
+form input:-ms-input-placeholder {
+  color: #f8f8f8;
+  opacity: 1;
+  font-weight: 300;
+}
+form input::-ms-input-placeholder {
+  color: #f8f8f8;
+  opacity: 1;
+  font-weight: 300;
+}
+form input::placeholder {
+  color: #f8f8f8;
+  opacity: 1;
+  font-weight: 300;
+}
+form button {
+  background-color: #f8f8f8;
+  color: #212121;
+  font-weight: 300;
   font-family: "Rubik";
+  padding: 2%;
   border: none;
   outline: none;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 footer {
+  background-color: #212121;
   text-align: center;
   padding: 1%;
+}
+footer p {
+  color: #f8f8f8;
 }
