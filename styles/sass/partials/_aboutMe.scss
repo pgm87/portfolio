@@ -7,19 +7,36 @@
         margin: 20px 0;
     }
 
+    @media (max-width:$mobileWidth) {
+        position: relative;
+    }
+
     .aboutMeContent {
         display: flex;
         justify-content: space-between;
         align-items: center;
 
+
+
         p {
             width: 60%;
             font-size: 1rem;
+
+
+            @media (max-width:$mobileWidth) {
+                width: 100%;
+            }
 
         }
 
         .aboutMeImage {
             width: 28%;
+
+            @media (max-width:$mobileWidth) {
+                position: absolute;
+                top: -20px;
+                right: 0;
+            }
 
             img {
                 width: 100%;
@@ -27,7 +44,7 @@
                 height: auto;
                 border-radius: 50%;
                 border: 3px solid $fontColor;
-               
+
             }
         }
     }

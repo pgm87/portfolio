@@ -27,6 +27,11 @@
 
             p {
                 margin: 30px 0;
+                font-weight: 300;
+
+                @media(max-width:$mobileWidth) {
+                    font-size: 0.9rem;
+                }
             }
         }
 
@@ -78,6 +83,7 @@
 
             p {
                 margin: 30px 0;
+                font-weight: 300;
             }
 
             .imgProject {
@@ -100,8 +106,7 @@
 
                 .firstLink {
                     margin-right: 20px;
-                    border-right: 3px solid $hoverColor;
-                    padding-right: 20px;
+
                 }
             }
         }
