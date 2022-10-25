@@ -437,6 +437,7 @@ header .headerText {
   header .headerText {
     position: absolute;
     z-index: 50;
+    background-color: rgba(248, 248, 248, 0.9);
   }
 }
 header .imgBoxProfile {
@@ -796,6 +797,7 @@ header .imgBoxProfile img {
   .projectsSection .imgProject {
     position: absolute;
     right: 10px;
+    width: 35%;
   }
 }
 .projectsSection .imgProject img {

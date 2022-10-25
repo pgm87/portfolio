@@ -35,6 +35,7 @@ header {
         @media (max-width:$mobileWidth) {
             position: absolute;
             z-index: 50;
+            background-color: rgba($color: $primaryColor, $alpha: 0.9);
         }
 
 
