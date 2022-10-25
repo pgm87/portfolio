@@ -54,6 +54,8 @@ form {
         background-color: inherit;
         border-bottom: 2px solid $primaryColor;
         margin-bottom: 2%;
+        color: white;
+        font-weight: 300;
 
         &::placeholder {
             color: $primaryColor;
@@ -70,6 +72,8 @@ form {
         font-family: inherit;
         width: 100%;
         background-color: inherit;
+        font-weight: 300;
+        color: $primaryColor;
 
         &::placeholder {
             color: $primaryColor;
@@ -87,6 +91,6 @@ form {
         padding: 2%;
         border: none;
         outline: none;
-        align-self: flex-end;
+
     }
 }

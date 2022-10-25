@@ -419,6 +419,19 @@ header .imgBoxProfile img {
   border: 3px solid #212121;
 }
 
+.topNav {
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 5%;
+  background-color: rgba(248, 248, 248, 0.9);
+  -webkit-box-shadow: 0 2px #212121;
+          box-shadow: 0 2px #212121;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  font-weight: 300;
+}
 .topNav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -504,8 +517,6 @@ header .imgBoxProfile img {
   height: auto;
   border-radius: 50%;
   border: 3px solid #212121;
-  -webkit-box-shadow: 0 1px 2px #212121;
-          box-shadow: 0 1px 2px #212121;
 }
 
 .skills {
@@ -689,6 +700,8 @@ form textarea {
   background-color: inherit;
   border-bottom: 2px solid #f8f8f8;
   margin-bottom: 2%;
+  color: white;
+  font-weight: 300;
 }
 form textarea::-webkit-input-placeholder {
   color: #f8f8f8;
@@ -721,6 +734,8 @@ form input {
   font-family: inherit;
   width: 100%;
   background-color: inherit;
+  font-weight: 300;
+  color: #f8f8f8;
 }
 form input::-webkit-input-placeholder {
   color: #f8f8f8;
@@ -755,8 +770,6 @@ form button {
   padding: 2%;
   border: none;
   outline: none;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
 }
 
 footer {
@@ -766,4 +779,115 @@ footer {
 }
 footer p {
   color: #f8f8f8;
+}
+
+.slideOutHidden {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  right: -512px;
+  position: fixed;
+  top: 0;
+}
+
+.slideOutReveal {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  right: 0px;
+  position: fixed;
+  top: 0;
+}
+
+.slideOutNav {
+  width: 100%;
+  max-width: 506px;
+  height: 100vh;
+  z-index: 200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(248, 248, 248, 0.8);
+  font-family: "Rubik";
+  font-weight: 300;
+  font-size: 1.3rem;
+  padding: 35px 50px;
+}
+.slideOutNav .buttonContainer {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+.slideOutNav .mainMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+.slideOutNav .mainMenu li {
+  padding: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.slideOutNav .mainMenu li a {
+  line-height: 2.5rem;
+}
+.slideOutNav .mainMenu li a:hover {
+  -webkit-animation: 1s ease-in addBoxShadow;
+          animation: 1s ease-in addBoxShadow;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.slideOutNav .mainMenu li a:focus {
+  -webkit-animation: 1s ease-in addBoxShadow;
+          animation: 1s ease-in addBoxShadow;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.openButton {
+  visibility: hidden;
+  position: fixed;
+  top: 10px;
+  right: 5%;
+}
+@media (max-width: 810px) {
+  .openButton {
+    visibility: visible;
+  }
+}
+
+.menuButton {
+  background-color: transparent;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  color: #212121;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.menuButton i {
+  width: 100%;
+  height: auto;
+  display: block;
+  color: #212121;
+}
+.menuButton:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.menuButton:focus {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }

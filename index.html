@@ -8,25 +8,34 @@
     <title>philip miles</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <script src="https://kit.fontawesome.com/9ebd40d00c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <nav class="topNav">
+        <button class="menuButton openButton">
+            <i class="fa-sharp fa-solid fa-grid fa-xl" alt="button to open navbar"></i>
+        </button>
+        <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
     <header class="wrapper" id="header">
-        <nav class="topNav">
-            <ul>
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="$contact">Contact</a></li>
-            </ul>
-        </nav>
+
+        <!-- top nav ends -->
         <div class="mainContent">
             <div class="headerText">
                 <h1>philip miles</h1>
                 <h2>frontend developer</h2>
             </div>
+            <!-- header text ends -->
             <div class="imgBoxProfile">
                 <img src="assets/portfolioimage.jpg" alt="Picture of me">
             </div>
+            <!-- header image ends -->
         </div>
         <nav class="socialNav">
             <div class="iconsNav">
@@ -39,15 +48,31 @@
             </div>
             <p>philip.g.miles@gmail.com</p>
         </nav>
+        <!-- social nav ends -->
+        <div class="slideOutNav slideOutHidden">
+            <div class="buttonContainer">
+                <button class="menuButton openButton">
+                    <i class="fa-sharp fa-solid fa-grid" alt="button to open navbar"></i>
+                </button>
+            </div>
+            <nav>
+                <ul class="slideOutMenu">
+                    <li><a href="">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <section class="wrapper aboutMe" id="about">
             <h2>About me</h2>
             <div class="aboutMeContent">
-                <p>Before being a Web Developer, I was a freelance musician, where I performed live, taught, and helped
-                    see creative ideas come to reality. Throughout my time, I learned how to express my ideas to a
-                    diverse audience, help come up creative solutions to complicated problems, and created an
-                    environment where everyone felt included. </p>
+                <p>Hello! I am a freelance musician turned frontend developer. I draw on my past experience to come up
+                    with creative solutions for responsive and accessible apps. I love to work on projects and I am
+                    always looking to collaborate. If I'm not programming, I'm still playing music. Checkout my tech
+                    stack below! </p>
                 <div class="aboutMeImage"><img src="./assets/aboutme.png" alt="photo of me in a winter paradise"></div>
             </div>
         </section>
@@ -78,9 +103,10 @@
                 <li>
                     <i class="devicon-git-plain-wordmark" alt="git icon"></i>
                 </li>
+                <li> <i class="fa-solid fa-table-cells"></i></li>
             </ul>
         </section>
-        <section class="projectsSection wrapper">
+        <section class="projectsSection wrapper" id="portfolio">
             <h2>Projects</h2>
             <div class="projectEven">
                 <div class="projectTextBox">
@@ -143,6 +169,7 @@
             made with care by me
         </p>
     </footer>
+
     <script src="app.js"></script>
 </body>
 
