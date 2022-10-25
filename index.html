@@ -14,14 +14,29 @@
 <body>
     <nav class="topNav">
         <button class="menuButton openButton">
-            <i class="fa-sharp fa-solid fa-grid fa-xl" alt="button to open navbar"></i>
+            <i class="fa-solid fa-table-cells" alt="button to open navbar"></i>
         </button>
-        <ul>
+        <ul class="desktopNav">
             <li><a href="#header">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="slideOutNav slideOutHidden">
+            <div class="buttonContainer">
+                <button class="menuButton closeButton">
+                    <i class="fa-sharp fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <nav>
+                <ul class="mainMenu">
+                    <li><a href="">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
     </nav>
     <header class="wrapper" id="header">
 
@@ -49,21 +64,7 @@
             <p>philip.g.miles@gmail.com</p>
         </nav>
         <!-- social nav ends -->
-        <div class="slideOutNav slideOutHidden">
-            <div class="buttonContainer">
-                <button class="menuButton openButton">
-                    <i class="fa-sharp fa-solid fa-grid" alt="button to open navbar"></i>
-                </button>
-            </div>
-            <nav>
-                <ul class="slideOutMenu">
-                    <li><a href="">HOME</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#portfolio">PORTFOLIO</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                </ul>
-            </nav>
-        </div>
+
     </header>
     <main>
         <section class="wrapper aboutMe" id="about">
@@ -103,7 +104,6 @@
                 <li>
                     <i class="devicon-git-plain-wordmark" alt="git icon"></i>
                 </li>
-                <li> <i class="fa-solid fa-table-cells"></i></li>
             </ul>
         </section>
         <section class="projectsSection wrapper" id="portfolio">

@@ -372,6 +372,20 @@ i {
   display: block;
 }
 
+button {
+  color: #212121;
+  text-decoration: none;
+  -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  padding: 3px;
+}
+button:hover {
+  -webkit-animation: 0.5s ease-in addBoxShadow;
+          animation: 0.5s ease-in addBoxShadow;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 header {
   background-color: #f8f8f8;
   color: #212121;
@@ -398,9 +412,16 @@ header .mainContent {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  padding: 10% 0;
+  padding: 15% 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 512px) {
+  header .mainContent {
+    position: relative;
+    top: 50%;
+  }
 }
 header .headerText {
   -ms-flex-item-align: center;
@@ -410,13 +431,121 @@ header .headerText {
           animation: 1s ease-in addBoxShadow;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  background-color: #f8f8f8;
+}
+@media (max-width: 512px) {
+  header .headerText {
+    position: absolute;
+    z-index: 50;
+  }
 }
 header .imgBoxProfile {
   width: 30%;
 }
+@media (max-width: 512px) {
+  header .imgBoxProfile {
+    position: absolute;
+    top: -50%;
+    left: 71%;
+    width: 25%;
+  }
+}
 header .imgBoxProfile img {
   border-radius: 50%;
   border: 3px solid #212121;
+  z-index: 25;
+}
+
+.slideOutNav {
+  width: 100%;
+  max-width: 506px;
+  height: 100vh;
+  z-index: 200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(248, 248, 248, 0.9);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  font-weight: bold;
+  color: #212121;
+  font-size: 1.4rem;
+  padding: 35px 50px;
+}
+.slideOutNav .menuButton {
+  background-color: #f8f8f8;
+  border: none;
+  color: #212121;
+}
+.slideOutNav .mainMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  font-weight: 300;
+}
+.slideOutNav .mainMenu li {
+  padding: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.slideOutNav .mainMenu li a {
+  line-height: 2.5rem;
+}
+.slideOutNav .mainMenu li a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.slideOutNav .mainMenu li a:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.slideOutHidden {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  right: -512px;
+  position: fixed;
+  top: 0;
+}
+
+.slideOutReveal {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  right: 0;
+  position: fixed;
+  top: 0;
+}
+
+.openButton {
+  visibility: hidden;
+  position: fixed;
+  top: 3px;
+  right: 5%;
+}
+@media (max-width: 810px) {
+  .openButton {
+    visibility: visible;
+  }
+}
+
+.closeButton {
+  position: relative;
+  left: 200px;
 }
 
 .topNav {
@@ -431,8 +560,23 @@ header .imgBoxProfile img {
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   font-weight: 300;
+  z-index: 100;
 }
-.topNav ul {
+@media (max-width: 810px) {
+  .topNav {
+    right: 0;
+  }
+}
+.topNav .menuButton {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background-color: transparent;
+  border: none;
+  color: #212121;
+  font-size: 1.4rem;
+  padding: 5px;
+}
+.topNav .desktopNav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -440,7 +584,12 @@ header .imgBoxProfile img {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-.topNav ul li {
+@media (max-width: 810px) {
+  .topNav .desktopNav {
+    visibility: hidden;
+  }
+}
+.topNav .desktopNav li {
   margin: 0 5px;
 }
 
@@ -454,6 +603,11 @@ header .imgBoxProfile img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media (max-width: 512px) {
+  .socialNav {
+    visibility: hidden;
+  }
 }
 .socialNav .iconsNav {
   display: -webkit-box;
@@ -644,6 +798,9 @@ header .imgBoxProfile img {
           align-items: center;
   margin-bottom: 40px;
 }
+.contact h2 {
+  padding: 20px 0;
+}
 .contact .leftSideContact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -779,115 +936,4 @@ footer {
 }
 footer p {
   color: #f8f8f8;
-}
-
-.slideOutHidden {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  right: -512px;
-  position: fixed;
-  top: 0;
-}
-
-.slideOutReveal {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  right: 0px;
-  position: fixed;
-  top: 0;
-}
-
-.slideOutNav {
-  width: 100%;
-  max-width: 506px;
-  height: 100vh;
-  z-index: 200;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: rgba(248, 248, 248, 0.8);
-  font-family: "Rubik";
-  font-weight: 300;
-  font-size: 1.3rem;
-  padding: 35px 50px;
-}
-.slideOutNav .buttonContainer {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-.slideOutNav .mainMenu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-}
-.slideOutNav .mainMenu li {
-  padding: 20px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-.slideOutNav .mainMenu li a {
-  line-height: 2.5rem;
-}
-.slideOutNav .mainMenu li a:hover {
-  -webkit-animation: 1s ease-in addBoxShadow;
-          animation: 1s ease-in addBoxShadow;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-.slideOutNav .mainMenu li a:focus {
-  -webkit-animation: 1s ease-in addBoxShadow;
-          animation: 1s ease-in addBoxShadow;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-.openButton {
-  visibility: hidden;
-  position: fixed;
-  top: 10px;
-  right: 5%;
-}
-@media (max-width: 810px) {
-  .openButton {
-    visibility: visible;
-  }
-}
-
-.menuButton {
-  background-color: transparent;
-  padding: 10px;
-  cursor: pointer;
-  margin-top: 10px;
-  color: #212121;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-.menuButton i {
-  width: 100%;
-  height: auto;
-  display: block;
-  color: #212121;
-}
-.menuButton:hover {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-.menuButton:focus {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }

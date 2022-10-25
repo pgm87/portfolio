@@ -1,5 +1,57 @@
 @use "variables" as *;
 
+.slideOutNav {
+
+    width: 100%;
+    max-width: 506px;
+    height: 100vh;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba($color: $primaryColor, $alpha: 0.9);
+    backdrop-filter: blur(4px);
+    font-weight: bold;
+    color: $fontColor;
+    font-size: 1.4rem;
+    padding: 35px 50px;
+
+    .menuButton {
+        background-color: $primaryColor;
+        border: none;
+        color: $fontColor;
+    }
+
+    .mainMenu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        font-weight: 300;
+
+
+        li {
+            padding: 20px;
+            transition: 0.3s;
+
+
+            a {
+                line-height: 2.5rem;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                &:focus {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+    }
+
+}
+
 .slideOutHidden {
     transition: 0.3s;
     right: -512px;
@@ -9,62 +61,15 @@
 
 .slideOutReveal {
     transition: 0.3s;
-    right: 0px;
+    right: 0;
     position: fixed;
     top: 0;
-}
-
-.slideOutNav {
-    width: 100%;
-    max-width: 506px;
-    height: 100vh;
-    z-index: 200;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba($color: $primaryColor, $alpha: 0.8);
-    font-family: $primaryFont;
-    font-weight: 300;
-    font-size: 1.3rem;
-    padding: 35px 50px;
-
-    .buttonContainer {
-        align-self: flex-end;
-    }
-
-    .mainMenu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 100%;
-
-        li {
-            padding: 20px;
-            transition: 0.3s;
-
-            a {
-                line-height: 2.5rem;
-
-
-                &:hover {
-                    animation: 1s ease-in addBoxShadow;
-                    animation-fill-mode: forwards;
-                }
-
-                &:focus {
-                    animation: 1s ease-in addBoxShadow;
-                    animation-fill-mode: forwards;
-                }
-            }
-        }
-
-    }
 }
 
 .openButton {
     visibility: hidden;
     position: fixed;
-    top: 10px;
+    top: 3px;
     right: 5%;
 
     @media (max-width:$tabletRegular) {
@@ -72,28 +77,7 @@
     }
 }
 
-.menuButton {
-    background-color: transparent;
-    padding: 10px;
-    cursor: pointer;
-    margin-top: 10px;
-    color: $fontColor;
-    transition: 0.3s;
-
-    i {
-        width: 100%;
-        height: auto;
-        display: block;
-        color: $fontColor;
-    }
-
-
-    &:hover {
-        transition: 0.3s;
-    }
-
-    &:focus {
-        transition: 0.3s;
-    }
-
+.closeButton {
+    position: relative;
+    left: 200px;
 }

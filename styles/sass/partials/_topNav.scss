@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "./slideOutNav";
 
 .topNav {
     padding: 10px 0;
@@ -10,13 +11,32 @@
     box-shadow: 0 2px rgba($color: $fontColor, $alpha: 1);
     backdrop-filter: blur(2px);
     font-weight: 300;
+    z-index: 100;
 
-    ul {
+    @media (max-width:$tabletRegular) {
+        right: 0;
+    }
+
+    .menuButton {
+        align-self: flex-end;
+        background-color: transparent;
+        border: none;
+        color: $fontColor;
+        font-size: 1.4rem;
+        padding: 5px;
+    }
+
+    .desktopNav {
         display: flex;
         justify-content: flex-end;
+
+        @media (max-width:$tabletRegular) {
+            visibility: hidden;
+        }
 
         li {
             margin: 0 5px;
         }
     }
+
 }
