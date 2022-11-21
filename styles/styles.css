@@ -676,7 +676,7 @@ header .imgBoxProfile img {
   }
 }
 .aboutMe .aboutMeContent .aboutMeImage {
-  width: 28%;
+  width: 24%;
 }
 @media (max-width: 512px) {
   .aboutMe .aboutMeContent .aboutMeImage {
@@ -791,7 +791,7 @@ header .imgBoxProfile img {
   margin-right: 20px;
 }
 .projectsSection .imgProject {
-  width: 40%;
+  width: 38%;
 }
 @media (max-width: 512px) {
   .projectsSection .imgProject {
@@ -803,6 +803,11 @@ header .imgBoxProfile img {
 .projectsSection .imgProject img {
   border-radius: 5%;
   border: 2px solid #c5c5c5;
+}
+@media (max-width: 512px) {
+  .projectsSection .imgProject img {
+    display: none;
+  }
 }
 .projectsSection .projectOdd {
   display: -webkit-box;

@@ -54,7 +54,8 @@
     }
 
     .imgProject {
-        width: 40%;
+        width: 38%;
+
 
         @media(max-width:$mobileWidth) {
             position: absolute;
@@ -65,6 +66,10 @@
         img {
             border-radius: 5%;
             border: 2px solid $hoverColor;
+
+            @media (max-width:$mobileWidth) {
+                display: none;
+            }
 
         }
     }
